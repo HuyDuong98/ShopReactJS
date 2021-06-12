@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- all css here -->
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="./css/animate.css">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="./css/meanmenu.min.css">
+    <!-- Font-Awesome css -->
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <!-- Flaticon css -->
+    <link rel="stylesheet" href="./css/flaticon.css">
+    <!-- venobox css -->
+    <link rel="stylesheet" href="./venobox/venobox.css" type="text/css" media="screen" />
+    <!-- nivo slider css -->
+    <link rel="stylesheet" href="./lib/css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="./lib/css/preview.css" type="text/css" media="screen" />
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- modernizr css -->
+    <script src="./js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+     <!-- all js here -->
+    <!-- jquery latest version -->
+   
+    <script src="./js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <!-- jquery-ui js -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <!-- jquery countdown js -->
+    <script src="./js/jquery.countdown.min.js"></script>
+    <!-- jquery countdown js -->
+    <script type="text/javascript" src="./venobox/venobox.min.js"></script>
+    <!-- jquery Meanmenu js -->
+    <script src="./js/jquery.meanmenu.js"></script>
+    <!-- wow js -->
+    <script src="./js/wow.min.js"></script>
+    <!-- scrollUp JS -->
+    <script src="./js/jquery.scrollUp.min.js"></script>
+    <!-- plugins js -->
+    <script src="./js/plugins.js"></script>
+    <!-- Nivo slider js -->
+    <script src="./lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="./lib/home.js" type="text/javascript"></script>
+    <!-- Google Map js -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapOptions = {
+                zoom: 8,
+                scrollwheel: false,
+                center: new google.maps.LatLng(10.667842, 107.249063)
+            };
+            var map = new google.maps.Map(document.getElementById('googleMap'),
+                mapOptions);
+            var marker = new google.maps.Marker({
+                position: map.getCenter(),
+                animation: google.maps.Animation.BOUNCE,
+                icon: 'img/map-icon.png',
+                map: map
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <!-- main js -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

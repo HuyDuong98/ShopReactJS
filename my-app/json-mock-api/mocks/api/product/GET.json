@@ -1,0 +1,56 @@
+[
+    {
+        "image":"../img/shop/2.jpg",
+        "name":"STERLING SILVER",
+        "price":"360.00",
+        "oldPrice":"450.00",
+        "status":"sale",
+        "statusName":"sale",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla."
+    },
+    {
+        "image":"../img/shop/3.jpg",
+        "name":"STERLING SILVER",
+        "price":"360.00",
+        "oldPrice":"450.00",
+        "status":"sale",
+        "statusName":"sale",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla."
+    },
+    {
+        "image":"../img/shop/4.jpg",
+        "name":"STERLING SILVER",
+        "price":"360.00",
+        "oldPrice":null,
+        "status":"sale",
+        "statusName":"sale",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla."
+    },
+    {
+        "image":"../img/shop/5.jpg",
+        "name":"STERLING SILVER",
+        "price":"360.00",
+        "oldPrice":null,
+        "status":"sale",
+        "statusName":"sale",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla."
+    },
+    {
+        "image":"../img/shop/6.jpg",
+        "name":"STERLING SILVER",
+        "price":"360.00",
+        "oldPrice":null,
+        "status":"sale",
+        "statusName":"sale",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla."
+    },
+    {
+        "image":"../img/shop/7.jpg",
+        "name":"STERLING SILVER",
+        "price":"360.00",
+        "oldPrice":null,
+        "status":"sale",
+        "statusName":"sale",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla."
+    }
+]

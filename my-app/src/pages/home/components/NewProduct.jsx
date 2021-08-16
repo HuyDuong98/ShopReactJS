@@ -1,7 +1,23 @@
+import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export default function NewProduct(params) {
-    return(
-        <>
-         {/*New Product Area Start*/}
+  const options = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  }
+
+
+  return (
+    <>
+      {/*New Product Area Start*/}
       <div className="new-product-area">
         <div className="container">
           <div className="row">
@@ -57,7 +73,7 @@ export default function NewProduct(params) {
               <div className="section-title">
                 <h2>New Trend</h2>
               </div>
-              <div className="new-trend-list indicator-style">
+              <Slider {...options} className="new-trend-list indicator-style">
                 <div className="col-md-4">
                   <div className="single-new-trend">
                     <a href="shop.html"><img src="../img/new-product/5.jpg" alt="" /></a>
@@ -213,12 +229,12 @@ export default function NewProduct(params) {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Slider>
             </div>
           </div>
         </div>
       </div>
       {/* New Product Area End */}
-        </>
-    )
+    </>
+  )
 };

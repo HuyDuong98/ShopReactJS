@@ -1,11 +1,24 @@
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export default function Testimonial(params) {
+    const options = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    }
+
     return (
         <>
             {/*Testimonial Area Start*/}
             < div className="testimonial-area section-padding" >
                 <div className="container">
                     <div className="row">
-                        <div className="testimonial-list indicator-style-3">
+                        <Slider {...options} className="testimonial-list indicator-style-3">
                             <div className="single-testimonial">
                                 <div className="col-md-offset-1 col-md-2 col-sm-2">
                                     <div className="support-img">
@@ -51,7 +64,7 @@ export default function Testimonial(params) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Slider>
                     </div>
                 </div>
             </div>

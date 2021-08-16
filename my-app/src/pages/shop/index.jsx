@@ -1,6 +1,18 @@
 import Brand from "../../components/Brand";
+import Category from "../../containers/Category";
+import Compare from "./components/Compare";
+import PopularTag from "./components/PopularTag";
+import ProductList from "./components/ProductList";
+import ShopBy from "./components/ShopBy";
+import Product from "./components/Product";
+import { useEffect } from "react";
 
-export default function Shop(params) {
+export default function Shop({ products, fetchProducts  }) {
+
+    useEffect(()=>{
+        fetchProducts()
+    },[fetchProducts])
+
     return (
         <>
             {/* Breadcrumbs Area Start */}
@@ -20,181 +32,10 @@ export default function Shop(params) {
                     <div className="row">
                         <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                             <div className="shop-widget">
-                                <aside className="widget widget-categories">
-                                    <h2 className="sidebar-title">CATEGORY</h2>
-                                    <ul className="sidebar-menu">
-                                        <li>
-                                            <a href="#">
-                                                Rings
-                          <span>(10)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Necklaces
-                          <span>(15)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Bracelets
-                          <span>(5)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Earrings
-                          <span>(25)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Churies
-                          <span>(14)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Jewelry Sets
-                          <span>(20)</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </aside>
-                                <aside className="widget widget-shop-by">
-                                    <h2 className="sidebar-title">SHOP BY</h2>
-                                    <h3 className="sidebar-sub-title">Manufacture</h3>
-                                    <ul className="sidebar-menu">
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Rings</span>
-                                                <span>(20)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Necklaces</span>
-                                                <span>(26)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Bracelets</span>
-                                                <span>(15)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Earrings</span>
-                                                <span>(22)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Churies</span>
-                                                <span>(26)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Jewelry Sets</span>
-                                                <span>(36)</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </aside>
-                                <aside className="widget widget-shop-by">
-                                    <h3 className="sidebar-sub-title">Price</h3>
-                                    <div className="info-widget">
-                                        <div className="price_filter">
-                                            <div id="slider-range" />
-                                            <div className="price_slider_amount">
-                                                <input type="text" id="amount" name="price" placeholder="Add Your Price" />
-                                                <input type="submit" defaultValue="SEARCH" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </aside>
-                                <aside className="widget widget-shop-by">
-                                    <h3 className="sidebar-sub-title">Color</h3>
-                                    <ul className="sidebar-menu">
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">White</span>
-                                                <span>(21)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Black</span>
-                                                <span>(5)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Blue</span>
-                                                <span>(10)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Red</span>
-                                                <span>(14)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Green</span>
-                                                <span>(20)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span className="widget-hover">Gray</span>
-                                                <span>(6)</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </aside>
-                                <aside className="widget widget-populer-tag">
-                                    <h2 className="sidebar-title">POPULAR TAG</h2>
-                                    <ul className="tag-list">
-                                        <li><a href="#">Fashion</a></li>
-                                        <li><a href="#">Women’s</a></li>
-                                        <li><a href="#">Kids</a></li>
-                                        <li><a href="#">Lookbook</a></li>
-                                        <li><a href="#">Accessories</a></li>
-                                        <li><a href="#">Dress</a></li>
-                                        <li><a href="#">Sale Off</a></li>
-                                        <li><a href="#">Accessories</a></li>
-                                        <li><a href="#">Clothing</a></li>
-                                        <li><a href="#">Clothing</a></li>
-                                        <li><a href="#">men’s</a></li>
-                                        <li><a href="#">Carry bag</a></li>
-                                    </ul>
-                                </aside>
-                                <aside className="widget widget-compare">
-                                    <h2 className="sidebar-title">COMPARE</h2>
-                                    <ul className="side-bar-compare">
-                                        <li>
-                                            Product Name #01
-                        <a href="#"><span><i className="fa fa-times" /></span></a>
-                                        </li>
-                                        <li>
-                                            Product Name #02
-                        <a href="#"><i className="fa fa-times" /></a>
-                                        </li>
-                                    </ul>
-                                </aside>
-                                <aside className="widget widget-image">
-                                    <a href="#">
-                                        <img src="../img/shop/side-bar.jpg" alt="" />
-                                    </a>
-                                    <div className="widget-content">
-                                        <h2>Friday Sale <br />Extra <br />30% Off</h2>
-                                        <a href="#">Shop Now <i className="fa fa-angle-right" /> </a>
-                                    </div>
-                                </aside>
+                                <Category />
+                                <ShopBy />
+                                <PopularTag />
+                                <Compare />
                             </div>
                         </div>
                         <div className="col-lg-9 col-md-9 col-sm-9 col-xs-12">
@@ -222,13 +63,13 @@ export default function Shop(params) {
                                                 <li className="product-size-deatils">
                                                     <div className="show-label">
                                                         <label>Show : </label>
-                                                        {/* <select>
-                                                            <option value={10} selected="selected">10</option>
-                                                            <option value={09}>09</option>
-                                                            <option value={08}>08</option>
-                                                            <option value={07}>07</option>
-                                                            <option value={06}>06</option>
-                                                        </select> */}
+                                                        <select>
+                                                            <option value="10" selected="selected">10</option>
+                                                            <option value="9">09</option>
+                                                            <option value="8">08</option>
+                                                            <option value="7">07</option>
+                                                            <option value="6">06</option>
+                                                        </select>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -249,354 +90,35 @@ export default function Shop(params) {
                                 <div className="tab-content">
                                     <div className="row tab-pane fade in active" id="home">
                                         <div className="shop-single-product-area">
-                                            <div className="col-md-4 col-sm-6">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/5.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-overlay sale">
-                                                        <h3>sale</h3>
-                                                    </div>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 col-sm-6">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/2.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-overlay new">
-                                                        <h3>New</h3>
-                                                    </div>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 col-sm-6">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/3.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-overlay offer">
-                                                        <h3>-20%</h3>
-                                                    </div>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                            <span className="old-price">$460.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 col-sm-6">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/4.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 col-sm-6">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/5.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-overlay sale">
-                                                        <h3>Hot</h3>
-                                                    </div>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 col-sm-6">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/6.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                            <span className="old-price">$450.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 col-sm-6 hidden-xs">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/7.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 col-sm-6 hidden-xs">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/8.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 hidden-sm hidden-xs">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/9.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                            <span className="old-price">$540.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 hidden-sm hidden-xs">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/10.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 hidden-sm hidden-xs">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/11.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 hidden-sm hidden-xs">
-                                                <div className="single-product">
-                                                    <a href="single-product.html">
-                                                        <img src="../img/shop/12.jpg" alt="" />
-                                                    </a>
-                                                    <div className="single-product-content">
-                                                        <div className="left-content pull-left">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                            <span className="old-price">$450.00</span>
-                                                        </div>
-                                                        <div className="right-content pull-right">
-                                                            <a href="#"><i className="flaticon-bag" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            {
+                                                products.map((product, i) => (
+                                                    <Product key={i} image={product.image} name={product.name} price={product.price} oldPrice={product.oldPrice} status={product.status} statusName={product.statusName} />
+                                                ))
+                                            }
+                                            {/* <Product image='../img/shop/2.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='sale' statusName='sale' />
+                                            <Product image='../img/shop/3.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='new' statusName='New' />
+                                            <Product image='../img/shop/4.jpg' name='STERLING SILVER' price='360.00' oldPrice={'460.00'} status='offer' statusName='-20%' />
+                                            <Product image='../img/shop/5.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='' statusName='' />
+                                            <Product image='../img/shop/6.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='sale' statusName='Hot' />
+                                            <Product image='../img/shop/7.jpg' name='STERLING SILVER' price='360.00' oldPrice={'450.00'} status='sale' statusName='sale' />
+                                            <Product image='../img/shop/8.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='' statusName='' />
+                                            <Product image='../img/shop/9.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='' statusName='' />
+                                            <Product image='../img/shop/10.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='' statusName='' />
+                                            <Product image='../img/shop/11.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='' statusName='' />
+                                            <Product image='../img/shop/12.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='' statusName='' />
+                                            <Product image='../img/shop/3.jpg' name='STERLING SILVER' price='360.00' oldPrice={null} status='' statusName='' /> */}
                                         </div>
                                     </div>
                                     <div id="menu1" className="tab-pane fade">
                                         <div className="row">
-                                            <div className="col-md-12">
-                                                <div className="shop-list-single">
-                                                    <div className="shop-list-left">
-                                                        <a href="#"><img src="../img/shop/5.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div className="shop-list-right">
-                                                        <div className="left-content">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="list-pro-rating">
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star" />
-                                                        </div>
-                                                        <div className="product-desc">
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus
-                                  mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper.</p>
-                                                            <p>Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-                                                        </div>
-                                                        <a className="btn-default" href="#">SHOP NOW</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-12">
-                                                <div className="shop-list-single">
-                                                    <div className="shop-list-left">
-                                                        <a href="#"><img src="../img/shop/2.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div className="shop-list-right">
-                                                        <div className="left-content">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="list-pro-rating">
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                        </div>
-                                                        <div className="product-desc">
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus
-                                  mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper.</p>
-                                                            <p>Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-                                                        </div>
-                                                        <a className="btn-default" href="#">SHOP NOW</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-12">
-                                                <div className="shop-list-single">
-                                                    <div className="shop-list-left">
-                                                        <a href="#"><img src="../img/shop/3.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div className="shop-list-right">
-                                                        <div className="left-content">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$360.00</span>
-                                                        </div>
-                                                        <div className="list-pro-rating">
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star" />
-                                                        </div>
-                                                        <div className="product-desc">
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus
-                                  mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper.</p>
-                                                            <p>Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-                                                        </div>
-                                                        <a className="btn-default" href="#">SHOP NOW</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-12">
-                                                <div className="shop-list-single">
-                                                    <div className="shop-list-left">
-                                                        <a href="#"><img src="../img/shop/4.jpg" alt="" /></a>
-                                                    </div>
-                                                    <div className="shop-list-right">
-                                                        <div className="left-content">
-                                                            <a href="#">
-                                                                <h2>STERLING SILVER</h2>
-                                                            </a>
-                                                            <span className="new-price">$250.00</span>
-                                                        </div>
-                                                        <div className="list-pro-rating">
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star icolor" />
-                                                            <i className="fa fa-star" />
-                                                        </div>
-                                                        <div className="product-desc">
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus
-                                  mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper.</p>
-                                                            <p>Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-                                                        </div>
-                                                        <a className="btn-default" href="#">SHOP NOW</a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            {
+                                                products.map((product) => (
+                                                    <ProductList image={product.image} name={product.name} price={product.price} description={product.description} />
+                                                ))
+                                            }
+                                            {/* <ProductList image='../img/shop/5.jpg' name='STERLING SILVER' price='360.00' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.' />
+                                            <ProductList image='../img/shop/3.jpg' name='STERLING SILVER' price='360.00' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.' />
+                                            <ProductList image='../img/shop/7.jpg' name='STERLING SILVER' price='360.00' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.Morbi ornare lectus quis justo gravida semper. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.' /> */}
                                         </div>
                                     </div>
                                 </div>
@@ -623,13 +145,13 @@ export default function Shop(params) {
                                                 <li className="product-size-deatils">
                                                     <div className="show-label">
                                                         <label>Show : </label>
-                                                        {/* <select>
+                                                        <select>
                                                             <option value={10} selected="selected">10</option>
-                                                            <option value={09}>09</option>
-                                                            <option value={08}>08</option>
-                                                            <option value={07}>07</option>
-                                                            <option value={06}>06</option>
-                                                        </select> */}
+                                                            <option value={9}>09</option>
+                                                            <option value={8}>08</option>
+                                                            <option value={7}>07</option>
+                                                            <option value={6}>06</option>
+                                                        </select>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -653,7 +175,7 @@ export default function Shop(params) {
                 </div>
             </div>
             {/* Shop Page Area End */}
-            <Brand/>
+            <Brand />
         </>
     )
 };

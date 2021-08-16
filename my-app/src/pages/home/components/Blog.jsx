@@ -1,4 +1,19 @@
+import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export default function Blog(params) {
+    const options = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    }
+
     return (
         <>
             {/* Blog Area Start */}
@@ -8,7 +23,7 @@ export default function Blog(params) {
                         <div className="section-title">
                             <h2>LATEST FROM BLOG</h2>
                         </div>
-                        <div className="blog-list indicator-style">
+                        <Slider {...options} className="blog-list indicator-style">
                             <div className="col-md-4">
                                 <div className="single-blog">
                                     <div className="blog-img">
@@ -144,7 +159,7 @@ export default function Blog(params) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Slider>
                     </div>
                 </div>
             </div>

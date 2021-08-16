@@ -3286,3 +3286,7 @@ h3.widget-title-modal {
 .modal-content {
     background-color: #f3f3f3;
 }
+
+.text-error{
+    color: #ff2222;
+}

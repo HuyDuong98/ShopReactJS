@@ -1,4 +1,12 @@
+import React from "react";
+import {
+  Link,
+  NavLink,
+} from "react-router-dom";
+import useAuth from "../core/useAuth";
+
 export default function Header(params) {
+  let { login, user, hadleLogout } = useAuth()
   return (
     <>
       <header>
@@ -14,7 +22,6 @@ export default function Header(params) {
               <div className="col-md-6">
                 <div className="header-top-menu pull-right">
                   <ul className="nav-menu">
-                    <li><a href="login.html">LOGIN</a></li>
                     <li><a href="#">LANGLUAGE</a>
                       <div className="ht-menu-down">
                         <ul>
@@ -32,6 +39,16 @@ export default function Header(params) {
                         </ul>
                       </div>
                     </li>
+                    {
+                      login ? (
+                        <>
+                        <li><Link to="#">Hello, {user.name}</Link></li>
+                        <li><Link to="#" onClick={hadleLogout}>LOGOUT</Link></li>
+                        </>
+                      ) : (
+                        <li><Link to="/login">LOGIN</Link></li>
+                      )
+                    }
                   </ul>
                 </div>
               </div>
@@ -52,21 +69,20 @@ export default function Header(params) {
                 <div className="mainmenu text-center">
                   <nav>
                     <ul id="nav">
-                      <li><a href="index.html">HOME</a></li>
-                      <li><a href="shop.html">SHOP</a></li>
-                      <li><a href="shop.html">MEN</a></li>
-                      <li><a href="shop.html">WOMEN</a></li>
-                      <li><a href="shop.html">COLLECTION</a></li>
+                      <li><NavLink to="/">HOME</NavLink></li>
+                      <li><NavLink to="/shop">SHOP</NavLink></li>
+                      <li><NavLink to="/shop">MEN</NavLink></li>
+                      <li><NavLink to="/shop">WOMEN</NavLink></li>
+                      <li><NavLink to="/shop">COLLECTION</NavLink></li>
                       <li><a href="#">Pages</a>
                         <ul className="sub-menu">
-                          <li><a href="404.html">404 Page</a></li>
-                          <li><a href="about.html">About Us</a></li>
+                          <li><NavLink to="/about">About Us</NavLink></li>
                           <li><a href="cart.html">Cart Page</a></li>
                           <li><a href="checkout.html">Check Out</a></li>
                           <li><a href="contact-us.html">Contact</a></li>
-                          <li><a href="login.html">Login</a></li>
+                          <li><NavLink to="/login">Login</NavLink></li>
                           <li><a href="my-account.html">My Account</a></li>
-                          <li><a href="shop.html">Shopping Page</a></li>
+                          <li><NavLink to="/shop">Shopping Page</NavLink></li>
                           <li><a href="single-product.html">Single Shop Page</a></li>
                           <li><a href="wishlist.html">Wishlist Page</a></li>
                         </ul>
@@ -130,22 +146,22 @@ export default function Header(params) {
               <div className="mobile-menu">
                 <nav id="dropdown">
                   <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">SHOP</a></li>
-                    <li><a href="shop.html">MEN</a></li>
-                    <li><a href="shop.html">WOMEN</a></li>
-                    <li><a href="shop.html">COLLECTION</a></li>
+                    <li><Link to="/">HOME</Link></li>
+                    <li><Link to="/shop">SHOP</Link></li>
+                    <li><Link to="/shop">MEN</Link></li>
+                    <li><Link to="/shop">WOMEN</Link></li>
+                    <li><Link to="/shop">COLLECTION</Link></li>
                     <li><a href="#">Pages</a>
-                      <ul>
-                        <li><a href="404.html">404 Page</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
+                      <ul className="sub-menu">
+                        <li><Link to="/about">About Us</Link></li>
                         <li><a href="cart.html">Cart Page</a></li>
-                        <li><a href="checkout.html">Checkout Page</a></li>
-                        <li><a href="contact.html">Contact Page</a></li>
-                        <li><a href="login.html">Login</a></li>
+                        <li><a href="checkout.html">Check Out</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><Link to="/login">Login</Link></li>
                         <li><a href="my-account.html">My Account</a></li>
-                        <li><a href="shop.html">Shop Page</a></li>
-                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><Link to="/shop">Shopping Page</Link></li>
+                        <li><a href="single-product.html">Single Shop Page</a></li>
+                        <li><a href="wishlist.html">Wishlist Page</a></li>
                       </ul>
                     </li>
                     <li><a href="contact-us.html">CONTACT</a></li>
